@@ -1,98 +1,43 @@
 AllCops:
+  TargetRubyVersion: 2.5
   Exclude:
-    - 'bin/**/*'
-    - 'db/**/*'
-    - 'config/**/*'
-    - 'script/**/*'
-
-Rails:
-  Enabled: true
-
-Layout/AlignParameters:
-  EnforcedStyle: with_fixed_indentation
-
-Layout/CaseIndentation:
-  EnforcedStyle: end
-
-Layout/IndentHash:
-  Enabled: false
-
-Layout/MultilineMethodCallIndentation:
-  EnforcedStyle: indented
-
-Layout/MultilineOperationIndentation:
-  EnforcedStyle: indented
-
-Layout/SpaceInsideHashLiteralBraces:
-  Enabled: false
-
-Layout/AlignHash:
-  Enabled: true
-  EnforcedLastArgumentHashStyle: always_ignore
-  
-Layout/EndAlignment:
-  EnforcedStyleAlignWith: variable
-
-Style/AsciiComments:
-  Enabled: false
-
-Style/CollectionMethods:
-  Enabled: true
-  PreferredMethods:
-      inject: 'inject'
-
-Style/Documentation:
-  Enabled: false
-
-Style/BlockDelimiters:
-  Exclude:
-    - spec/**/*_spec.rb
-
-Style/BracesAroundHashParameters:
-  Exclude:
-    - spec/**/*_spec.rb
-
-Style/GuardClause:
-  Enabled: false
-
-Style/IfUnlessModifier:
-  Enabled: false
-
-Style/Lambda:
-  Enabled: false
-
-Style/RaiseArgs:
-  Enabled: false
-
-Style/SignalException:
-  Enabled: false
-
-Metrics/AbcSize:
-  Max: 20
-
-Metrics/ClassLength:
-  Max: 100
-
-Metrics/ModuleLength:
-  Max: 100
+    - bin/**/*
+    - db/**/*
+    - lib/**/*
+    - node_modules/**/*
+    - config/**/*.rb
+    - Rakefile
+    - .pryrc
+    - vendor/**/*
 
 Metrics/LineLength:
   Enabled: false
 
+Style/StringLiterals:
+  EnforcedStyle: single_quotes
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Metrics/BlockLength:
+  Exclude:
+    - spec/**/*.rb
+    - app/**/concerns/**/*.rb
+
+Style/SignalException:
+  EnforcedStyle: semantic
+
+Style/Documentation:
+  Enabled: false
+
 Metrics/MethodLength:
-  Max: 15
-
-Style/SingleLineBlockParams:
   Enabled: false
 
-Style/FormatString:
+Metrics/PerceivedComplexity:
   Enabled: false
 
-Style/WordArray:
+Metrics/CyclomaticComplexity:
   Enabled: false
 
-Style/RedundantSelf:
+Metrics/AbcSize:
   Enabled: false
-
-Style/TrivialAccessors:
-  AllowPredicates: true

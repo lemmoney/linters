@@ -1,0 +1,13 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "extends": "airbnb",
+  "parser": "babel-eslint",
+  "plugins": ["prettier"],
+  "rules": {
+    "indent": ["error", 2],
+    "global-require": ["warn"]
+  }
+}
